@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bf1nxa1hlt62c"]
+[gd_scene load_steps=4 format=3 uid="uid://bf1nxa1hlt62c"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_5xs2d"]
+[ext_resource type="Script" path="res://game.gd" id="1_chhkw"]
+[ext_resource type="PackedScene" uid="uid://yviopuv3bha8" path="res://lobby/lobby.tscn" id="2_2m7hy"]
+[ext_resource type="Script" path="res://lobby/lobby.gd" id="3_ohbuj"]
 
-[node name="Main" type="Node"]
-script = ExtResource("1_5xs2d")
+[node name="Game" type="Node"]
+script = ExtResource("1_chhkw")
+
+[node name="Lobby" parent="." instance=ExtResource("2_2m7hy")]
+script = ExtResource("3_ohbuj")
